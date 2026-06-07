@@ -20,10 +20,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 NextGenZ<span>.careers</span>
 </a>
 
-<button class="menu-toggle" id="menuToggle">
-<i class="fas fa-bars"></i>
-</button>
-
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="jobs.html">Jobs</a>
@@ -312,22 +308,6 @@ console.error(error);
 
 document.getElementById("latestJobs").innerHTML =
 "<p>Unable to load latest jobs.</p>";
-
-});
-
-</script>
-
-<script>
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuToggle.addEventListener("click",()=>{
-
-navLinks.classList.toggle("active");
 
 });
 
