@@ -335,7 +335,7 @@ margin-bottom:25px;
 
 .job-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
@@ -553,7 +553,51 @@ color:#64748b;
    MOBILE
 ========================= */
 
+.menu-toggle{
+display:none;
+background:none;
+border:none;
+font-size:28px;
+cursor:pointer;
+}
+
 @media(max-width:768px){
+
+.job-grid{
+grid-template-columns:1fr;
+}
+
+.navbar{
+position:relative;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+right:0;
+width:100%;
+background:white;
+padding:20px;
+border-radius:0 0 15px 15px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+flex-direction:column;
+gap:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+margin:0;
+padding:8px 0;
+}
 
 .hero-content{
 flex-direction:column;
@@ -576,12 +620,12 @@ grid-template-columns:repeat(2,1fr);
 }
 
 .social-grid{
-grid-template-columns:repeat(2,1fr);
+flex-direction:column;
+align-items:center;
 }
 
 .hero-image img{
 max-width:320px;
 }
-
 
 }
