@@ -96,15 +96,6 @@ transition:.3s ease;
 width:100%;
 }
 
-.menu-toggle{
-display:none;
-background:none;
-border:none;
-font-size:32px;
-cursor:pointer;
-color:#111827;
-}
-
 /* =========================
    TICKER
 ========================= */
@@ -564,35 +555,33 @@ color:#64748b;
 
 @media(max-width:768px){
 
-.navbar{
-position:relative;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.nav-links{
-display:none;
-position:absolute;
-top:80px;
-right:0;
-background:white;
-width:220px;
-padding:20px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
+.hero-content{
 flex-direction:column;
-gap:15px;
 }
 
-.nav-links.active{
-display:flex;
+.hero-text h1{
+font-size:38px;
 }
 
-.nav-links a{
-margin:0;
-padding:10px 0;
+.cards{
+grid-template-columns:1fr;
 }
+
+.job-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.social-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-image img{
+max-width:320px;
+}
+
 
 }
