@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Details | NextGenZ.careers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#111827;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+background:#fff;
+padding:20px 0;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#2563eb;
+}
+
+.logo span{
+color:#22c55e;
+}
+
+.nav-links a{
+text-decoration:none;
+margin-left:25px;
+color:#111827;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 0 30px;
+}
+
+.company{
+display:inline-block;
+background:#dbeafe;
+color:#2563eb;
+padding:8px 15px;
+border-radius:30px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#64748b;
+}
+
+/* INFO CARDS */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin:40px 0;
+}
+
+.info-card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.info-card h3{
+font-size:14px;
+color:#64748b;
+margin-bottom:8px;
+}
+
+.info-card p{
+font-weight:600;
+}
+
+/* SECTIONS */
+
+.section{
+background:white;
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.section h2{
+margin-bottom:15px;
+color:#2563eb;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+/* APPLY BOX */
+
+.apply-box{
+background:linear-gradient(
+135deg,
+#2563eb,
+#4f46e5
+);
+
+padding:40px;
+border-radius:20px;
+
+color:white;
+
+text-align:center;
+
+margin:40px 0;
+}
+
+.apply-box h2{
+margin-bottom:15px;
+}
+
+.apply-btn{
+display:inline-block;
+
+background:white;
+color:#2563eb;
+
+padding:14px 28px;
+
+border-radius:10px;
+
+text-decoration:none;
+font-weight:600;
+
+margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+padding:40px;
+text-align:center;
+color:#64748b;
+margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.info-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="container navbar">
+
+<div class="logo">
+NextGenZ<span>.careers</span>
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="roadmaps.html">Roadmaps</a>
+<a href="resources.html">Resources</a>
+</div>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="company" id="company">
+Loading...
+</div>
+
+<h1 id="role">
+Loading...
+</h1>
+
+<p id="descriptionShort">
+Loading...
+</p>
+
+</section>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>Location</h3>
+<p id="location">Loading...</p>
+</div>
+
+<div class="info-card">
+<h3>Experience</h3>
+<p id="experience">Loading...</p>
+</div>
+
+<div class="info-card">
+<h3>Salary</h3>
+<p id="salary">Loading...</p>
+</div>
+
+<div class="info-card">
+<h3>Qualification</h3>
+<p id="eligibility">Loading...</p>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>
+Required Skills
+</h2>
+
+<ul id="skillsList">
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>
+Selection Process
+</h2>
+
+<ul id="selectionProcess">
+</ul>
+
+</div>
+
+<div class="apply-box">
+
+<h2>
+🚀 Ready To Apply?
+</h2>
+
+<p>
+Click below to proceed to the official application page.
+</p>
+
+<a
+id="applyBtn"
+href="#"
+class="apply-btn"
+target="_blank"
+rel="noopener noreferrer"
+>
+Apply Now
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 NextGenZ.careers | Empowering Future Careers
+</footer>
+
+<script>
+
+const SHEET_URL =
+"https://opensheet.elk.sh/1BYlgaDfRpooK-59tOeE_zVIuWqKgYcrGlc1aWQddtQc/JobDetails";
+
+fetch(SHEET_URL)
+.then(response => response.json())
+.then(data => {
+
+const requestedId =
+new URLSearchParams(window.location.search)
+.get("id");
+
+console.log("Requested ID:", requestedId);
+
+const job =
+data.find(job =>
+
+job["Job ID"] === requestedId
+
+);
+
+console.log("Matched Job:", job);
+
+if(!job){
+
+document.body.innerHTML =
+"<h1>Job Not Found</h1>";
+
+return;
+
+}
+
+document.getElementById("company")
+.textContent =
+job.Company;
+
+document.getElementById("role")
+.textContent =
+job.Role;
+
+document.getElementById("descriptionShort")
+.textContent =
+job.Description;
+
+document.getElementById("selectionProcess")
+.textContent =
+job.SelectionProcess;
+
+document.getElementById("location")
+.textContent =
+job.Location;
+
+document.getElementById("experience")
+.textContent =
+job.Experience;
+
+document.getElementById("salary")
+.textContent =
+job.Salary;
+
+document.getElementById("eligibility")
+.textContent =
+job.Eligibility;
+
+const skillsList =
+document.getElementById("skillsList");
+
+skillsList.innerHTML = "";
+
+job.Skills
+.split(",")
+
+.forEach(skill => {
+
+skillsList.innerHTML +=
+`<li>${skill.trim()}</li>`;
+
+});
+
+const selectionProcess=
+document.getElementById("selectionProcess");
+
+selectionProcess.innerHTML = "";
+
+job["Selection Process"]
+.split(",")
+
+.forEach((step,index) => {
+
+selectionProcess.innerHTML += `
+<li>
+<strong>Step ${index + 1}</strong> -
+${step.replace(/Step\s*\d+\s*:/i,'').trim()}
+</li>
+`;
+
+});
+
+document
+.getElementById("applyBtn")
+.href =
+`redirect.html?id=${requestedId}`;
+
+})
+.catch(error => {
+
+console.error(error);
+
+document.body.innerHTML =
+"<h1>Error Loading Job</h1>";
+
+});
+
+</script>
+
+</body>
+</html>

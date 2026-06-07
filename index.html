@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGenZ.careers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<nav>
+<div class="container navbar">
+
+<a href="index.html" class="logo">
+NextGenZ<span>.careers</span>
+</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="roadmaps.html">Roadmaps</a>
+<a href="resources.html">Resources</a>
+</div>
+
+</div>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>
+Launch Your <span>Career</span> With Confidence
+</h1>
+
+<p>
+Discover career roadmaps, internships, fresher jobs,
+resources and opportunities curated for students.
+</p>
+
+<div class="hero-buttons">
+
+<a href="jobs.html" class="btn-primary">
+Explore Jobs
+</a>
+
+<a href="roadmaps.html" class="btn-secondary">
+Roadmaps
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img
+src="assets/mascots/blue-hoodie-girl.jpeg"
+alt="Mascot">
+</div>
+
+</div>
+
+</section>
+
+<!-- COMMUNITY STATS -->
+
+<div class="stats">
+
+<div class="stat-card blue">
+<h2>10K+</h2>
+<p>Instagram Followers</p>
+</div>
+
+<div class="stat-card green">
+<h2>1.2K+</h2>
+<p>Telegram Members</p>
+</div>
+
+<div class="stat-card blue">
+<h2>200+</h2>
+<p>WhatsApp Followers</p>
+</div>
+
+<div class="stat-card green">
+<h2>80+</h2>
+<p>YouTube Subscribers</p>
+</div>
+
+</div>
+
+<!-- ROADMAPS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Popular Career Roadmaps
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Software Development</h3>
+<p>Frontend, Backend & Full Stack</p>
+</div>
+
+<div class="card">
+<h3>Data Science</h3>
+<p>Analytics & Machine Learning</p>
+</div>
+
+<div class="card">
+<h3>UI/UX Design</h3>
+<p>Design modern digital products</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- JOBS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Latest Opportunities
+</h2>
+
+<div class="job-grid" id="latestJobs">
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+<a href="jobs.html" class="btn-primary">
+View All Jobs →
+</a>
+</div>
+
+</section>
+
+<!-- TELEGRAM -->
+
+<div class="telegram">
+
+<h2>
+🚀 Join Telegram For Instant Job Alerts
+</h2>
+
+<p>
+Get latest jobs, internships and career opportunities instantly.
+</p>
+
+<a
+href="https://t.me/NextGenZ_3507"
+target="_blank"
+rel="noopener noreferrer"
+>
+Join Telegram
+</a>
+
+</div>
+
+<!-- SOCIAL LINKS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Connect With NextGenZ
+</h2>
+
+<div class="social-grid">
+
+<a href="https://www.instagram.com/nextgenz.careers___"
+target="_blank"
+class="social-card">
+
+<div class="social-icon">
+<i class="fab fa-instagram"></i>
+</div>
+
+<h3>Instagram</h3>
+<p>10K+ Followers</p>
+
+</a>
+
+<a href="https://t.me/NextGenZ_3507"
+target="_blank"
+class="social-card">
+
+<div class="social-icon">
+<i class="fab fa-telegram"></i>
+</div>
+
+<h3>Telegram</h3>
+<p>1.3K+ Members</p>
+
+</a>
+
+<a href="https://whatsapp.com/channel/0029Vb7myvzFXUuTW505jc34"
+target="_blank"
+class="social-card">
+
+<div class="social-icon">
+<i class="fab fa-whatsapp"></i>
+</div>
+
+<h3>WhatsApp</h3>
+<p>200+ Followers</p>
+
+</a>
+
+<a href="https://youtube.com/@nextgenz.careers"
+target="_blank"
+class="social-card">
+
+<div class="social-icon">
+<i class="fab fa-youtube"></i>
+</div>
+
+<h3>YouTube</h3>
+<p>80+ Subscribers</p>
+
+</a>
+
+</div>
+
+</section>
+
+
+</div>
+
+<footer>
+© 2026 NextGenZ.careers | Empowering Future Careers
+</footer>
+
+<script>
+
+const SHEET_URL =
+"https://opensheet.elk.sh/1BYlgaDfRpooK-59tOeE_zVIuWqKgYcrGlc1aWQddtQc/JobDetails";
+
+fetch(SHEET_URL)
+
+.then(response => response.json())
+
+.then(data => {
+
+const latestJobs =
+data.slice(0,6);
+
+const jobsContainer =
+document.getElementById("latestJobs");
+
+jobsContainer.innerHTML = "";
+
+latestJobs.forEach(job => {
+
+jobsContainer.innerHTML += `
+
+<div class="job-card">
+
+<div style="display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap;">
+
+<span class="badge category">
+${job.Category}
+</span>
+
+${job["Is New"] === "TRUE"
+? '<span class="badge new">NEW</span>'
+: ''
+}
+
+</div>
+
+<h3>
+${job.Company} - ${job.Role}
+</h3>
+
+<p>📍 ${job.Location}</p>
+
+<p>💼 ${job.Experience}</p>
+
+<p>💰 ${job.Salary} LPA</p>
+
+<a
+href="career.html?id=${job["Job ID"]}"
+class="apply-btn">
+View Details →
+</a>
+
+</div>
+
+`;
+
+});
+
+})
+
+.catch(error => {
+
+console.error(error);
+
+document.getElementById("latestJobs").innerHTML =
+"<p>Unable to load latest jobs.</p>";
+
+});
+
+</script>
+</body>
+</html>
