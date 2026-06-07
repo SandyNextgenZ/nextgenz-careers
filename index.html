@@ -275,7 +275,7 @@ jobsContainer.innerHTML += `
 ${job.Category}
 </span>
 
-${job["Is New"] === "TRUE"
+${job['Is New'] === 'TRUE'
 ? '<span class="badge new">NEW</span>'
 : ''
 }
@@ -293,7 +293,7 @@ ${job.Company} - ${job.Role}
 <p>💰 ${job.Salary} LPA</p>
 
 <a
-href="career.html?id=${job["Job ID"]}"
+href="career.html?id=${job['Job ID']}"
 class="apply-btn">
 View Details →
 </a>
