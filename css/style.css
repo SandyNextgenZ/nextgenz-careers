@@ -555,33 +555,27 @@ color:#64748b;
 
 @media(max-width:768px){
 
-.hero-content{
+.navbar{
 flex-direction:column;
+gap:15px;
 }
 
-.hero-text h1{
-font-size:38px;
+.nav-links{
+display:flex !important;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+width:100%;
 }
 
-.cards{
-grid-template-columns:1fr;
+.nav-links a{
+margin-left:0;
+font-size:16px;
 }
 
-.job-grid{
-grid-template-columns:1fr;
+.logo{
+font-size:32px;
+text-align:center;
 }
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-.social-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero-image img{
-max-width:320px;
-}
-
 
 }
