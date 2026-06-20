@@ -273,7 +273,9 @@ padding:25px;
 <a href="index.html" class="logo">
 NextGenZ<span>.careers</span>
 </a>
-
+<button class="menu-toggle" id="menuToggle">
+<i class="fas fa-bars"></i>
+</button>
 <div class="nav-links">
 
 <a href="index.html">Home</a> <a href="jobs.html">Jobs</a> <a href="roadmaps.html">Roadmaps</a> <a href="resources.html">Resources</a>
@@ -526,6 +528,20 @@ Freshers Jobs • Internships • Remote Jobs • Career Roadmaps
 </div>
 
 </footer>
+<script>
 
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuToggle.addEventListener("click",()=>{
+
+navLinks.classList.toggle("active");
+
+});
+
+</script>
 </body>
 </html>
