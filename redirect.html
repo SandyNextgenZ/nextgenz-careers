@@ -114,7 +114,7 @@ background:linear-gradient(
 
 border-radius:50px;
 
-animation:load 5s linear forwards;
+animation:load 10s linear forwards;
 
 }
 
@@ -232,14 +232,22 @@ and redirect you to the official application page.
 </div>
 
 <div class="countdown">
-Redirecting in <span id="timer">5</span>s
+Redirecting in <span id="timer">10</span>s
 </div>
 
 <div class="notice">
 
-✅ Checking application link<br>
-✅ Verifying opportunity details<br>
-✅ Redirecting to official company website
+<div id="step1">
+⏳ Checking application link
+</div>
+
+<div id="step2">
+⏳ Verifying opportunity details
+</div>
+
+<div id="step3">
+⏳ Loading official application page
+</div>
 
 </div>
 
@@ -248,7 +256,7 @@ href="https://careers.cognizant.com"
 class="manual-btn"
 id="manualLink"
 >
-Continue Now
+Apply Now →
 </a>
 
 </div>
@@ -287,11 +295,47 @@ return;
 const applyLink =
 job["Apply Link"];
 
+// Update Continue Now button
+document.getElementById("manualLink").href = applyLink;
+
+// Countdown
+let seconds = 10;
+
 setTimeout(() => {
+document.getElementById("step1").innerHTML =
+"✅ Application link verified";
+},2000);
+
+setTimeout(() => {
+document.getElementById("step2").innerHTML =
+"✅ Opportunity details verified";
+},4000);
+
+setTimeout(() => {
+document.getElementById("step3").innerHTML =
+"✅ Redirecting to official website";
+},8000);
+
+const timerElement =
+document.getElementById("timer");
+
+const countdown = setInterval(() => {
+
+seconds--;
+
+if(seconds <= 0){
+
+clearInterval(countdown);
 
 window.location.href = applyLink;
 
-}, 3000);
+return;
+
+}
+
+timerElement.textContent = seconds;
+
+},1000);
 
 })
 
