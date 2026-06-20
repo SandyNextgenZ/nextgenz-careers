@@ -276,8 +276,23 @@ color:#64748b;
 font-size:36px;
 }
 
+.menu-toggle{
+display:block;
+}
+
 .nav-links{
 display:none;
+flex-direction:column;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+padding:20px;
+}
+
+.nav-links.active{
+display:flex;
 }
 
 }
@@ -290,6 +305,10 @@ display:none;
 
 <nav>
 <div class="container navbar">
+
+<a href="index.html" class="logo">
+NextGenZ<span>.careers</span>
+</a>
 
 <button class="menu-toggle" id="menuToggle">
 <i class="fas fa-bars"></i>
