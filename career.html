@@ -8,6 +8,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -187,20 +188,46 @@ color:#64748b;
 margin-top:50px;
 }
 
+/* MENU BUTTON */
+.menu-toggle{
+display:none;
+background:none;
+border:none;
+font-size:24px;
+cursor:pointer;
+color:#111827;
+}
+  
 /* MOBILE */
 
 @media(max-width:768px){
 
-.info-grid{
-grid-template-columns:repeat(2,1fr);
+.hero h1{
+font-size:38px;
 }
 
-.hero h1{
-font-size:32px;
+.menu-toggle{
+display:block;
 }
 
 .nav-links{
 display:none;
+flex-direction:column;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.cta{
+padding:35px 25px;
 }
 
 }
@@ -211,8 +238,11 @@ display:none;
 <body>
 
 <nav>
-
 <div class="container navbar">
+
+<a href="index.html" class="logo">
+NextGenZ<span>.careers</span>
+</a>
 
 <button class="menu-toggle" id="menuToggle">
 <i class="fas fa-bars"></i>
