@@ -67,17 +67,12 @@ margin-bottom:40px;
 .social-section{
 padding:10px 0 50px;
 }
-  
-.container{
-max-width:1400px;
-}
+
 .social-grid{
 display:flex;
 justify-content:center;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:25px;
 flex-wrap:wrap;
-margin-top:30px;
 }
 
 .social-card{
@@ -176,7 +171,6 @@ font-size:48px;
 }
 
 .social-grid{
-align-items:center;
 grid-template-columns:repeat(2,1fr);
 }
 
@@ -212,7 +206,6 @@ padding:0 15px;
 }
 
 .social-grid{
-align-items:center;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
 }
@@ -260,7 +253,6 @@ grid-template-columns:1fr;
 }
 
 .social-grid{
-align-items:center;
 grid-template-columns:1fr;
 }
 
@@ -283,12 +275,12 @@ padding:25px;
 <a href="index.html" class="logo">
 NextGenZ<span>.careers</span>
 </a>
-<button class="menu-toggle" id="menuToggle">
-<i class="fas fa-bars"></i>
-</button>
-<div class="nav-links" id="navLinks">
 
-<a href="index.html">Home</a> <a href="jobs.html">Jobs</a> <a href="roadmaps.html">Roadmaps</a> <a href="resources.html">Resources</a> <a href="contact.html">Contact Us</a> <a href="aboutus.html">About Us</a>
+<div class="nav-links">
+
+<a href="index.html">Home</a> <a href="jobs.html">Jobs</a> <a href="roadmaps.html">Roadmaps</a> <a href="resources.html">Resources</a>
+<a href="contact.html">Contact Us</a> 
+<a href="aboutus.html">About Us</a>
 
 </div>
 
@@ -358,13 +350,72 @@ Connect with NextGenZ.careers across our growing community platforms for jobs, i
 
 </section>
 
+<section class="partnership-section">
+
+<div class="container">
+
+<div class="partnership-box">
+
+<h2>📩 Contact & Business Enquiries</h2>
+
+<p style="margin-bottom:20px;color:#64748b;">
+
+For partnerships, hiring announcements, internship programs,
+campus drives, promotions, collaborations, or any business enquiries,
+feel free to contact us.
+
+</p>
+
+<div style="
+background:#f8fafc;
+padding:25px;
+border-radius:15px;
+border:1px solid #e5e7eb;
+">
+
+<h3 style="margin-bottom:10px;">
+📧 Email Us
+</h3>
+
+<p style="margin-bottom:15px;color:#475569;">
+We'll usually respond within 24-48 hours.
+</p>
+
+<a
+href="mailto:nextgenz.careers@gmail.com"
+style="
+color:#2563eb;
+font-weight:600;
+font-size:18px;
+text-decoration:none;
+">
+
+nextgenz.careers@gmail.com
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="social-section">
 
 <div class="container">
 
-<h2 class="section-title">
-Connect With Us
-</h2>
+<p style="
+margin-top:20px;
+font-size:14px;
+color:#64748b;
+">
+
+For faster updates and community discussions,
+connect with us through Telegram, Instagram or WhatsApp.
+
+</p>
 
 <div class="social-grid">
 
@@ -538,20 +589,6 @@ Freshers Jobs • Internships • Remote Jobs • Career Roadmaps
 </div>
 
 </footer>
-<script>
 
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuToggle.addEventListener("click",()=>{
-
-navLinks.classList.toggle("active");
-
-});
-
-</script>
 </body>
 </html>
